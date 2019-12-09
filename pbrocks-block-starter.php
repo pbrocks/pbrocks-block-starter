@@ -34,6 +34,16 @@ function load_pbrocks_block_starter_init() {
 }
 
 
+/**
+ * Setup WordPress localization support
+ *
+ * @since 1.0
+ */
+function pbrocks_block_starter_load_textdomain() {
+	load_plugin_textdomain( 'pbrocks-block-starter', false, basename( dirname( __FILE__ ) ) . '/languages' );
+}
+add_action( 'plugins_loaded', 'pbrocks_block_starter_load_textdomain' );
+
 function pbrocks_block_starter_editor_assets() {
 	$url = untrailingslashit( plugin_dir_url( __FILE__ ) );
 
