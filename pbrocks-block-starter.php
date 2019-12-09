@@ -44,6 +44,11 @@ function pbrocks_block_starter_load_textdomain() {
 }
 add_action( 'plugins_loaded', 'pbrocks_block_starter_load_textdomain' );
 
+/**
+ * [pbrocks_block_starter_editor_assets] Setup blocks on frontend and editor.
+ *
+ * @return [type] [description]
+ */
 function pbrocks_block_starter_editor_assets() {
 	$url = untrailingslashit( plugin_dir_url( __FILE__ ) );
 
