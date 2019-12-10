@@ -1,10 +1,12 @@
+/**
+ * WordPress dependencies
+ */
+import { __ } from '@wordpress/i18n';
+import { registerBlockType } from '@wordpress/blocks';
 
-const { __ } = wp.i18n;
-const { registerBlockType } = wp.blocks;
-const { ServerSideRender,
-} = wp.components;
+import { ServerSideRender } from '@wordpress/components';
 
-import icon from './icon'; 
+import icon from './icon';
 
 registerBlockType( 'pbrocks-block-starter/amp-info', {
 	title: __( 'AMP: Info', 'pbrocks-block-starter' ),
@@ -13,17 +15,17 @@ registerBlockType( 'pbrocks-block-starter/amp-info', {
 		foreground: '#ffffff',
 		src: icon,
 	},
-	category: 'common',
+	category: 'pbrocks-block-starter',
 
-	edit: function( props ) {
+	edit( props ) {
 		return (
 			<ServerSideRender
 				block="pbrocks-block-starter/amp-info"
 				attributes={ props.attributes }
 			/>
-			);
+		);
 	},
-	save: function() {
+	save() {
 		return null;
 	},
 } );

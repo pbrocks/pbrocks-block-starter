@@ -148,6 +148,78 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
+/***/ "./src/blocks/amp-info/icon.js":
+/*!*************************************!*\
+  !*** ./src/blocks/amp-info/icon.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+var icon = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("svg", {
+  width: "20px",
+  height: "20px",
+  viewBox: "0 0 20 20",
+  xmlns: "http://www.w3.org/2000/svg"
+}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
+  d: "M13.3,9.1l-4,6.6H8.5l0.7-4.3l-2.2,0h0c-0.2,0-0.4-0.2-0.4-0.4c0-0.1,0.1-0.2,0.1-0.2l4-6.6l0.7,0l-0.7,4.3l2.2,0l0,0 c0.2,0,0.4,0.2,0.4,0.4C13.4,9,13.3,9.1,13.3,9.1L13.3,9.1z M10,0.5c-5.3,0-9.6,4.3-9.6,9.5c0,5.3,4.3,9.5,9.6,9.5 c5.3,0,9.6-4.3,9.6-9.5C19.6,4.7,15.3,0.5,10,0.5z"
+}));
+/* harmony default export */ __webpack_exports__["default"] = (icon);
+
+/***/ }),
+
+/***/ "./src/blocks/amp-info/index.js":
+/*!**************************************!*\
+  !*** ./src/blocks/amp-info/index.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./icon */ "./src/blocks/amp-info/icon.js");
+
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])('pbrocks-block-starter/amp-info', {
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('AMP: Info', 'pbrocks-block-starter'),
+  icon: {
+    background: '#29c8aa',
+    foreground: '#ffffff',
+    src: _icon__WEBPACK_IMPORTED_MODULE_4__["default"]
+  },
+  category: 'pbrocks-block-starter',
+  edit: function edit(props) {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["ServerSideRender"], {
+      block: "pbrocks-block-starter/amp-info",
+      attributes: props.attributes
+    });
+  },
+  save: function save() {
+    return null;
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/index.js":
 /*!*****************************!*\
   !*** ./src/blocks/index.js ***!
@@ -158,9 +230,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pbrocks_container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pbrocks-container */ "./src/blocks/pbrocks-container/index.js");
+/* harmony import */ var _amp_info__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./amp-info */ "./src/blocks/amp-info/index.js");
 /**
  * Internal dependencies
  */
+
 
 
 /***/ }),

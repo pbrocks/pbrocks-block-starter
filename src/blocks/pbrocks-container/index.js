@@ -2,24 +2,15 @@
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
-import {
-	registerBlockType,
-} from '@wordpress/blocks';
-
-import {
-	InnerBlocks
-} from '@wordpress/block-editor';
+import { registerBlockType } from '@wordpress/blocks';
+import { InnerBlocks } from '@wordpress/block-editor';
 
 registerBlockType( 'pbrocks-block-starter/container', {
 	title: __( 'Starter Container', 'pbrocks-block-starter' ),
 
 	description: __( 'Provide custom container.' ),
 
-	keywords: [
-		__( 'container' ),
-		__( 'wrapper' ),
-		__( 'section' ),
-	],
+	keywords: [ __( 'container' ), __( 'wrapper' ), __( 'section' ) ],
 
 	supports: {
 		align: [ 'wide', 'full' ],
@@ -32,7 +23,7 @@ registerBlockType( 'pbrocks-block-starter/container', {
 	icon: {
 		background: '#29c8aa',
 		foreground: '#ffffff',
-		src: 'editor-kitchensink'
+		src: 'editor-kitchensink',
 	},
 
 	attributes: {

@@ -31,6 +31,11 @@ function load_pbrocks_block_starter_init() {
 			include $filename;
 		}
 	}
+	if ( file_exists( __DIR__ . '/inc/classes' ) && is_dir( __DIR__ . '/inc/classes' ) ) {
+		foreach ( glob( __DIR__ . '/inc/classes/*.php' ) as $filename ) {
+			include $filename;
+		}
+	}
 }
 
 
