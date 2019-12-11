@@ -9,7 +9,7 @@
  * Domain Path:     /languages
  * Version:         0.1.1
  *
- * @package pbrocks_pbrocks_block_starter
+ * @package pbrocks_block_starter
  */
 
 
@@ -98,7 +98,7 @@ function create_pbrocks_block_starter_panel( $categories, $post ) {
 		array(
 			array(
 				'slug'  => 'pbrocks-block-starter',
-				'title' => __( 'Starter Blocks Panel', 'pbrocks-block-starter' ),
+				'title' => __( 'PBrocks Starter Blocks Panel', 'pbrocks-block-starter' ),
 			),
 		)
 	);
