@@ -29,7 +29,7 @@ const PostDeveloperInfoPanel = () => (
 	    <PluginDocumentSettingPanel
 			name="developer-panel"
 			title="Developer Panel"
-			initialOpen={false}
+			initialOpen={true}
 			icon="palmtree"
 			className="developer-panel"
 		>
