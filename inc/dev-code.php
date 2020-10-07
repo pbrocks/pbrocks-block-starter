@@ -1,4 +1,12 @@
 <?php
+add_filter( 'the_content', 'filter_the_content_in_the_main_loop', 1 );
+function filter_the_content_in_the_main_loop( $content ) {
+	$post_id = get_the_ID();
+	$added_content = 'Filtering content inside main loop for post ' . $post_id . ' ' . get_post_status();
+	return $content . esc_html__( $added_content, 'pbrocks-block-starter' );
+
+}
+
 add_action( 'save_post_swearby_story', 'pbrocks_on_save_swearby_story' );
 /**
  * [pbrocks_on_save_swearby_story description]
