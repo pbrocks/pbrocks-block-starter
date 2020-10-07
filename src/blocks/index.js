@@ -3,4 +3,4 @@
  */
 
 import './pbrocks-container';
-import './amp-info';
+// import './amp-info';
