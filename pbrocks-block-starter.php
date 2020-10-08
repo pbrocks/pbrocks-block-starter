@@ -17,6 +17,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+define( 'BLOX_BASE', __FILE__ );
+
 add_action( 'plugins_loaded', 'load_pbrocks_block_starter_init' );
 /**
  * load_pbrocks_block_starter_init
@@ -62,19 +64,19 @@ function pbrocks_block_starter_editor_assets() {
 	wp_enqueue_script(
 		'pbrocks-block-starter-js',
 		$url . '/build/index.js',
-		array(
+		[
 			'wp-blocks',
 			'wp-i18n',
 			'wp-element',
 			'wp-plugins',
 			'wp-edit-post',
-		)
+		]
 	);
 	// Styles.
 	wp_enqueue_style(
 		'pbrocks-block-starter-editor-css',
 		$url . '/build/editor.css',
-		array( 'wp-edit-blocks' )
+		[ 'wp-edit-blocks' ]
 	);
 }
 
@@ -101,12 +103,12 @@ add_action( 'enqueue_block_assets', 'pbrocks_block_starter_assets' );
 function create_pbrocks_block_starter_panel( $categories, $post ) {
 	return array_merge(
 		$categories,
-		array(
-			array(
+		[
+			[
 				'slug'  => 'pbrocks-block-starter',
 				'title' => __( 'Starter Blocks Panel', 'pbrocks-block-starter' ),
-			),
-		)
+			],
+		]
 	);
 }
 add_filter( 'block_categories', 'create_pbrocks_block_starter_panel', 10, 2 );

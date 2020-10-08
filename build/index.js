@@ -148,78 +148,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ "./src/blocks/amp-info/icon.js":
-/*!*************************************!*\
-  !*** ./src/blocks/amp-info/icon.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-
-var icon = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("svg", {
-  width: "20px",
-  height: "20px",
-  viewBox: "0 0 20 20",
-  xmlns: "http://www.w3.org/2000/svg"
-}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
-  d: "M13.3,9.1l-4,6.6H8.5l0.7-4.3l-2.2,0h0c-0.2,0-0.4-0.2-0.4-0.4c0-0.1,0.1-0.2,0.1-0.2l4-6.6l0.7,0l-0.7,4.3l2.2,0l0,0 c0.2,0,0.4,0.2,0.4,0.4C13.4,9,13.3,9.1,13.3,9.1L13.3,9.1z M10,0.5c-5.3,0-9.6,4.3-9.6,9.5c0,5.3,4.3,9.5,9.6,9.5 c5.3,0,9.6-4.3,9.6-9.5C19.6,4.7,15.3,0.5,10,0.5z"
-}));
-/* harmony default export */ __webpack_exports__["default"] = (icon);
-
-/***/ }),
-
-/***/ "./src/blocks/amp-info/index.js":
-/*!**************************************!*\
-  !*** ./src/blocks/amp-info/index.js ***!
-  \**************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./icon */ "./src/blocks/amp-info/icon.js");
-
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])('pbrocks-block-starter/amp-info', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('AMP: Info', 'pbrocks-block-starter'),
-  icon: {
-    background: '#29c8aa',
-    foreground: '#ffffff',
-    src: _icon__WEBPACK_IMPORTED_MODULE_4__["default"]
-  },
-  category: 'pbrocks-block-starter',
-  edit: function edit(props) {
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["ServerSideRender"], {
-      block: "pbrocks-block-starter/amp-info",
-      attributes: props.attributes
-    });
-  },
-  save: function save() {
-    return null;
-  }
-});
-
-/***/ }),
-
 /***/ "./src/blocks/index.js":
 /*!*****************************!*\
   !*** ./src/blocks/index.js ***!
@@ -230,12 +158,10 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])('pbr
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pbrocks_container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pbrocks-container */ "./src/blocks/pbrocks-container/index.js");
-/* harmony import */ var _amp_info__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./amp-info */ "./src/blocks/amp-info/index.js");
 /**
  * Internal dependencies
  */
-
-
+ // import './amp-info';
 
 /***/ }),
 
@@ -342,7 +268,10 @@ Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__["addFilter"])('editor.Block
 Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__["addFilter"])('blocks.getSaveElement', 'pbrocks-block-starter/modify-code-save-settings', modifyCodeSaveSettings);
 
 function addCodeAttributes(settings, name) {
-  if ('core/code' !== name) return settings;
+  if ('core/code' !== name) {
+    return settings;
+  }
+
   settings.title = Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('PBrocks Code', 'pbrocks-block-starter');
   settings.description = Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('PBrocks Code is used when you want code to be unparsed, ie displayed as written', 'pbrocks-block-starter');
   settings.supports = lodash.merge({}, settings.supports, {
@@ -444,11 +373,250 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks */ "./src/blocks/index.js");
 /* harmony import */ var _filters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./filters */ "./src/filters/index.js");
+/* harmony import */ var _plugins__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./plugins */ "./src/plugins/index.js");
 /**
  * Internal dependencies
  */
 
 
+
+
+/***/ }),
+
+/***/ "./src/plugins/developer-panel/index.js":
+/*!**********************************************!*\
+  !*** ./src/plugins/developer-panel/index.js ***!
+  \**********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/plugins */ "@wordpress/plugins");
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/edit-post */ "@wordpress/edit-post");
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__);
+
+
+/**
+ * SlotFill reference
+ *
+ * https://developer.wordpress.org/block-editor/developers/slotfills/
+ * https://developer.wordpress.org/block-editor/designers-developers/developers/slotfills/plugin-developer-setting-panel/
+ */
+
+ // import { EntityInnerBlocks, EntryPageContext } from 'components';
+// import { useSelect } from '@wordpress/data';
+// import { get } from 'lodash';
+// import { useMeta } from '@meredithcorp/onecms-utils';
+// const entryPagePost = wp.data.select('core/editor').getCurrentPostId();
+
+var DeveloperPanelContent = function DeveloperPanelContent() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, "Developer Panel Contents"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "This is just a paragraph set in the Developer Panel component."), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "PostType = ", wp.data.select('core/editor').getCurrentPostType()), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "PostID = ", wp.data.select('core/editor').getCurrentPostId()));
+};
+
+var PostDeveloperInfoPanel = function PostDeveloperInfoPanel() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__["PluginDocumentSettingPanel"], {
+    name: "developer-panel",
+    title: "Developer Panel",
+    initialOpen: false,
+    icon: "palmtree",
+    className: "developer-panel"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "developer-panel-content"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(DeveloperPanelContent, null))));
+};
+
+Object(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__["registerPlugin"])('post-developer-info-panel', {
+  render: PostDeveloperInfoPanel
+});
+
+/***/ }),
+
+/***/ "./src/plugins/document-panel/index.js":
+/*!*********************************************!*\
+  !*** ./src/plugins/document-panel/index.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/plugins */ "@wordpress/plugins");
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/edit-post */ "@wordpress/edit-post");
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__);
+
+
+/**
+ * SlotFill reference
+ *
+ * https://developer.wordpress.org/block-editor/developers/slotfills/
+ * https://developer.wordpress.org/block-editor/designers-developers/developers/slotfills/plugin-document-setting-panel/
+ */
+
+
+
+var DocumentPanel = function DocumentPanel() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, "Notice Panel Set to Open"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "This is just a paragraph set in the Document Panel component."), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "This is another paragraph set in the Document Panel component."));
+};
+
+var PostDocumentInfoPanel = function PostDocumentInfoPanel() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__["PluginDocumentSettingPanel"], {
+    name: "document-panel",
+    title: "Document Panel",
+    initialOpen: true,
+    className: "document-panel"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    className: "document-panel-content"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(DocumentPanel, null))));
+};
+
+Object(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__["registerPlugin"])('post-document-info-panel', {
+  render: PostDocumentInfoPanel
+});
+
+/***/ }),
+
+/***/ "./src/plugins/index.js":
+/*!******************************!*\
+  !*** ./src/plugins/index.js ***!
+  \******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _slot_fill_1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slot-fill-1 */ "./src/plugins/slot-fill-1/index.js");
+/* harmony import */ var _slot_fill_2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slot-fill-2 */ "./src/plugins/slot-fill-2/index.js");
+/* harmony import */ var _preview_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./preview-button */ "./src/plugins/preview-button/index.js");
+/* harmony import */ var _developer_panel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./developer-panel */ "./src/plugins/developer-panel/index.js");
+/* harmony import */ var _document_panel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./document-panel */ "./src/plugins/document-panel/index.js");
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/plugins/preview-button/index.js":
+/*!*********************************************!*\
+  !*** ./src/plugins/preview-button/index.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/plugins */ "@wordpress/plugins");
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/edit-post */ "@wordpress/edit-post");
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+
+
+/**
+ * SlotFill reference
+ *
+ * https://developer.wordpress.org/block-editor/developers/slotfills/
+ */
+
+
+
+
+var PreviewButtonGroup = function PreviewButtonGroup() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["ButtonGroup"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+    isPrimary: true
+  }, "Primary"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+    isSecondary: true
+  }, "Secondary"));
+};
+
+var PreviewButtonInStatusBox = function PreviewButtonInStatusBox() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__["PluginPostStatusInfo"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, "Preview Button"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PreviewButtonGroup, null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Preview Button Text Paragraph"));
+};
+
+Object(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__["registerPlugin"])('post-status-preview-button', {
+  render: PreviewButtonInStatusBox
+});
+
+/***/ }),
+
+/***/ "./src/plugins/slot-fill-1/index.js":
+/*!******************************************!*\
+  !*** ./src/plugins/slot-fill-1/index.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/plugins */ "@wordpress/plugins");
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/edit-post */ "@wordpress/edit-post");
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__);
+
+
+/**
+ * SlotFill reference
+ *
+ * https://developer.wordpress.org/block-editor/developers/slotfills/
+ */
+
+
+
+var PluginPostPublishPanelProof = function PluginPostPublishPanelProof() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__["PluginPostPublishPanel"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, "Proving Post Publish Panel"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Purported Post Publish Panel paragraph provided purposefully"));
+};
+
+Object(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__["registerPlugin"])('post-publish-panel-test', {
+  render: PluginPostPublishPanelProof
+});
+
+/***/ }),
+
+/***/ "./src/plugins/slot-fill-2/index.js":
+/*!******************************************!*\
+  !*** ./src/plugins/slot-fill-2/index.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/plugins */ "@wordpress/plugins");
+/* harmony import */ var _wordpress_plugins__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/edit-post */ "@wordpress/edit-post");
+/* harmony import */ var _wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__);
+
+
+/**
+ * SlotFill reference
+ *
+ * https://developer.wordpress.org/block-editor/developers/slotfills/
+ */
+
+
+
+var PluginPostStatusInfoTest = function PluginPostStatusInfoTest() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_2__["PluginPostStatusInfo"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, "Post Status Info SlotFill"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Post Status Info SlotFill Text Paragraph"));
+};
+
+Object(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_1__["registerPlugin"])('post-status-info-test', {
+  render: PluginPostStatusInfoTest
+});
 
 /***/ }),
 
@@ -496,6 +664,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "@wordpress/edit-post":
+/*!*******************************************!*\
+  !*** external {"this":["wp","editPost"]} ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["editPost"]; }());
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!******************************************!*\
   !*** external {"this":["wp","element"]} ***!
@@ -526,6 +705,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 (function() { module.exports = this["wp"]["i18n"]; }());
+
+/***/ }),
+
+/***/ "@wordpress/plugins":
+/*!******************************************!*\
+  !*** external {"this":["wp","plugins"]} ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["plugins"]; }());
 
 /***/ })
 
