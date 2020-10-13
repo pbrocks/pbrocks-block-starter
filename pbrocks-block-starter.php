@@ -17,6 +17,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+define( 'PBROCKS_REST_NAMESPACE', 'pbrocks/v1' );
+define( 'PBROCKS_BLOCK_SETTING', 'pbrocks_block_setting' );
+
+function pbrocks_plugin_activation() {
+	/* activation code here */
+	register_activation_hook( __FILE__, 'pbrocks_plugin_activation' );
+
+	$option_name = 'pbrocks_block_setting';
+
+	if ( false === get_option( $option_name ) ) {
+		update_option( $option_name, '' );
+	}
+}
+register_activation_hook( __FILE__, 'pbrocks_plugin_activation' );
+
 add_action( 'plugins_loaded', 'load_pbrocks_block_starter_init' );
 /**
  * load_pbrocks_block_starter_init
