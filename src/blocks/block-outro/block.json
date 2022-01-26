@@ -11,7 +11,7 @@
     "html": false
   },
   "textdomain": "pbrocks-block-starter",
-  "editorScript": "file:../../build/index.js",
-  "editorStyle": "file:../../build/index.css",
-  "style": "file:../../build/style-index.css"
+  "editorScript": "file:../../../build/index.js",
+  "editorStyle": "file:../../../build/index.css",
+  "style": "file:../../../build/style-index.css"
 }

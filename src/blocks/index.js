@@ -3,4 +3,5 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-import './blocks';
+import './block-intro';
+import './block-outro';
