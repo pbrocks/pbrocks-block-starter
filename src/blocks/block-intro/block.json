@@ -1,16 +1,16 @@
 {
 	"$schema": "https://json.schemastore.org/block.json",
 	"apiVersion": 2,
-	"name": "pharmacy-lookup/block-intro",
+	"name": "pbrocks-block-starter/block-intro",
 	"version": "0.1.0",
 	"title": "Pharmacy Lookup",
-	"category": "pharmacy-lookup",
+	"category": "pbrocks-block-starter",
 	"icon": "carrot",
 	"description": "Block written with ESNext standard and JSX support – build step required.",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "pharmacy-lookup",
+	"textdomain": "pbrocks-block-starter",
 	"editorScript": "file:../../build/index.js",
 	"editorStyle": "file:../../build/index.css",
 	"style": "file:../../build/style-index.css"

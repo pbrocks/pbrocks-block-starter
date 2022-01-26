@@ -27,7 +27,7 @@ export default function save() {
 		<p {...useBlockProps.save()}>
 			{__(
 				'Block Intro – hello from the saved content!',
-				'pharmacy-lookup'
+				'pbrocks-block-starter'
 			)}
 		</p>
 	);

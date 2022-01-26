@@ -33,7 +33,7 @@ export default function Edit() {
 	return (
 		<>
 		<p {...useBlockProps()}>
-			{__('Block Intro – hello from the editor!', 'pharmacy-lookup')}
+			{__('Block Intro – hello from the editor!', 'pbrocks-block-starter')}
 		</p>
 		</>
 	);

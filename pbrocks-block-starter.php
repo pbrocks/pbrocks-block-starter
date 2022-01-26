@@ -7,7 +7,7 @@
  * Author URI:      https://github.com/pbrocks
  * Text Domain:     pbrocks-block-starter
  * Domain Path:     /languages
- * Version:         0.1.1
+ * Version:         0.2.1
  *
  * @package pbrocks_block_starter
  */
@@ -34,6 +34,7 @@ function load_pbrocks_block_starter_init() {
 }
 
 
+add_action( 'plugins_loaded', 'pbrocks_block_starter_load_textdomain' );
 /**
  * Setup WordPress localization support
  *
@@ -42,8 +43,8 @@ function load_pbrocks_block_starter_init() {
 function pbrocks_block_starter_load_textdomain() {
 	load_plugin_textdomain( 'pbrocks-block-starter', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }
-add_action( 'plugins_loaded', 'pbrocks_block_starter_load_textdomain' );
 
+add_action( 'enqueue_block_editor_assets', 'pbrocks_block_starter_editor_assets' );
 /**
  * [pbrocks_block_starter_editor_assets] Setup blocks on frontend and editor.
  *
@@ -72,7 +73,7 @@ function pbrocks_block_starter_editor_assets() {
 	);
 }
 
-add_action( 'enqueue_block_editor_assets', 'pbrocks_block_starter_editor_assets' );
+add_action( 'enqueue_block_assets', 'pbrocks_block_starter_assets' );
 /**
  * [pbrocks_block_starter_assets] Hook assets into the editor.
  *
@@ -87,7 +88,18 @@ function pbrocks_block_starter_assets() {
 	);
 }
 
-add_action( 'enqueue_block_assets', 'pbrocks_block_starter_assets' );
+add_action( 'init', 'pharmacy_lookup_blocks_init' );
+/**
+ * Register blocks using the metadata loaded from the
+ * `block.json` file. Behind the scenes, it also
+ * registers all assets so they can be enqueued through
+ * the block editor in the corresponding context.
+ *
+ * @see https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/
+ */
+function pharmacy_lookup_blocks_init() {
+	register_block_type( __DIR__ . '/src/block-intro' );
+}
 
 /**
  * Adding a block category creates a Panel

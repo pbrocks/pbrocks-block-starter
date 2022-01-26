@@ -25,7 +25,7 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType('pharmacy-lookup/block-outro', {
+registerBlockType('pbrocks-block-starter/block-outro', {
 	/**
 	 * @see ./edit.js
 	 */
