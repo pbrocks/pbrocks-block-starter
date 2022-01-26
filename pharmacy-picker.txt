@@ -1,21 +1,17 @@
 <?php
 /**
- * Plugin Name:     PBrocks Block Starter
- * Plugin URI:      https://github.com/pbrocks/pbrocks-block-starter
- * Description:     Custom blocks for WordPress.
- * Author:          pbrocks
- * Author URI:      https://github.com/pbrocks
- * Text Domain:     pbrocks-block-starter
- * Domain Path:     /languages
- * Version:         0.2.1
+ * Plugin Name:       Pharmacy Picker
+ * Description:       Example block written with ESNext standard and JSX support – build step required.
+ * Requires at least: 5.8
+ * Requires PHP:      7.0
+ * Version:           0.2.1
+ * Author:            pbrocks
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       pbrocks-block-starter
  *
- * @package pbrocks_block_starter
+ * @package           Pharmacy_Picker
  */
-
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
 
 add_action( 'init', 'pharmacy_lookup_blocks_init' );
 /**
@@ -29,6 +25,7 @@ add_action( 'init', 'pharmacy_lookup_blocks_init' );
 function pharmacy_lookup_blocks_init() {
 	register_block_type( __DIR__ . '/src/block-intro' );
 	register_block_type( __DIR__ . '/src/block-outro' );
+	register_block_type( __DIR__ . '/src/pharmacy-picker' );
 }
 
 /**
@@ -40,7 +37,7 @@ function create_pharmacy_lookup_panel( $categories, $post ) {
 		array(
 			array(
 				'slug'  => 'pbrocks-block-starter',
-				'title' => __( 'PBrocks Panel', 'pbrocks-block-starter' ),
+				'title' => __( 'Pharmacy Panel', 'pbrocks-block-starter' ),
 			),
 		)
 	);
