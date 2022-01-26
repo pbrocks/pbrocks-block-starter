@@ -103,4 +103,4 @@ function create_pbrocks_block_starter_panel( $categories, $post ) {
 		)
 	);
 }
-add_filter( 'block_categories', 'create_pbrocks_block_starter_panel', 10, 2 );
+add_filter( 'block_categories_all', 'create_pbrocks_block_starter_panel', 10, 2 );

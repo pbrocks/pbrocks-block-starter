@@ -1,11 +1,11 @@
 {
-	"plugins": [
-		"."
-	],
-	"port": 4224,
-	"env": {
-		"tests": {
-			"port": 4248
-		}
-	}
+  "plugins": [
+    "."
+  ],
+  "port": 4222,
+  "env": {
+    "tests": {
+      "port": 6222
+    }
+  }
 }
