@@ -44,7 +44,7 @@ function pbrocks_block_starter_load_textdomain() {
 	load_plugin_textdomain( 'pbrocks-block-starter', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }
 
-add_action( 'enqueue_block_editor_assets', 'pbrocks_block_starter_editor_assets' );
+// add_action( 'enqueue_block_editor_assets', 'pbrocks_block_starter_editor_assets' );
 /**
  * [pbrocks_block_starter_editor_assets] Setup blocks on frontend and editor.
  *
@@ -73,7 +73,7 @@ function pbrocks_block_starter_editor_assets() {
 	);
 }
 
-add_action( 'enqueue_block_assets', 'pbrocks_block_starter_assets' );
+// add_action( 'enqueue_block_assets', 'pbrocks_block_starter_assets' );
 /**
  * [pbrocks_block_starter_assets] Hook assets into the editor.
  *
