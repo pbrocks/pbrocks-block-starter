@@ -1,17 +1,17 @@
 {
-	"$schema": "https://json.schemastore.org/block.json",
-	"apiVersion": 2,
-	"name": "pbrocks-block-starter/block-intro",
-	"version": "0.1.0",
-	"title": "Pharmacy Lookup",
-	"category": "pbrocks-block-starter",
-	"icon": "carrot",
-	"description": "Block written with ESNext standard and JSX support – build step required.",
-	"supports": {
-		"html": false
-	},
-	"textdomain": "pbrocks-block-starter",
-	"editorScript": "file:../../build/index.js",
-	"editorStyle": "file:../../build/index.css",
-	"style": "file:../../build/style-index.css"
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "pbrocks-block-starter/block-intro",
+  "version": "0.1.0",
+  "title": "Block Intro",
+  "category": "pbrocks-block-starter",
+  "icon": "carrot",
+  "description": "Block written with ESNext standard and JSX support – build step required.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "pbrocks-block-starter",
+  "editorScript": "file:../../build/index.js",
+  "editorStyle": "file:../../build/index.css",
+  "style": "file:../../build/style-index.css"
 }
