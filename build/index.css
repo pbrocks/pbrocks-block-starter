@@ -1,2 +1,334 @@
-.wp-block-pbrocks-block-starter-block-intro{border:1px dotted red}
-.wp-block-pbrocks-block-starter-block-outro{border:4px dotted red}
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/article-hero-header/editor.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+/* Single Block Editor CSS */
+/* Single Block Front-end CSS */
+.jsx-example-image {
+  height: 50vh;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/***** CHAPTER DIVIDER *****/
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/***** CHAPTER DIVIDER ******/
+.chapter-divider {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.chapter-divider h2 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: -4px;
+  color: #FFFFFF;
+}
+
+.chapter-divider .container {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.chapter-divider-content {
+  max-width: 540px;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.chapter-divider .scroll-icon {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.chapter-divider .scroll-icon svg {
+  width: 100%;
+  height: auto;
+}
+
+.scroll-icon-pulse {
+  position: absolute;
+  border: 1px dashed #FF5C52;
+  border-radius: 50%;
+  width: 160%;
+  height: 160%;
+  left: -30%;
+  top: -30%;
+  transform: scale(1);
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+
+.animation-fadeinup {
+  opacity: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+  -webkit-animation: fadeInUp 2s ease;
+          animation: fadeInUp 2s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .chapter-divider h1 {
+    font-size: 48px;
+  }
+}
+.components-select-control {
+  width: 100% !important;
+}
+
+.components-base-control {
+  width: 100%;
+}
+
+button.components-button.is-secondary {
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.components-select-control {
+  width: 100% !important;
+}
+
+.components-base-control {
+  width: 100%;
+}
+
+.block-editor-rich-text__editable section.article-hero.parallax-container {
+  background-size: cover;
+}
+
+.block-editor-block-preview__content section.article-hero .block-editor-rich-text__editable.rich-text {
+  font-size: 26px;
+}
+
+.block-editor-block-preview__content section.article-hero .overlay-skrim {
+  padding: 30px;
+}
+
+.block-editor-block-preview__content section.article-hero {
+  min-height: 350px !important;
+  height: 350px !important;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/article-hero-header/styles.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+/* Single Block Front-end CSS */
+.jsx-example-image {
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/***** CHAPTER DIVIDER *****/
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+/***** CHAPTER DIVIDER ******/
+.chapter-divider {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.chapter-divider h2 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: -4px;
+  color: #FFFFFF;
+}
+
+.chapter-divider .container {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.chapter-divider-content {
+  max-width: 540px;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.chapter-divider .scroll-icon {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.chapter-divider .scroll-icon svg {
+  width: 100%;
+  height: auto;
+}
+
+.scroll-icon-pulse {
+  position: absolute;
+  border: 1px dashed #FF5C52;
+  border-radius: 50%;
+  width: 160%;
+  height: 160%;
+  left: -30%;
+  top: -30%;
+  transform: scale(1);
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+
+.animation-fadeinup {
+  opacity: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+  -webkit-animation: fadeInUp 2s ease;
+          animation: fadeInUp 2s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .chapter-divider h1 {
+    font-size: 48px;
+  }
+}
+.components-select-control {
+  width: 100% !important;
+}
+
+.components-base-control {
+  width: 100%;
+}
+
+.block-editor-rich-text__editable section.article-hero.parallax-container {
+  background-size: cover;
+}
+
+.block-editor-block-preview__content section.article-hero .block-editor-rich-text__editable.rich-text {
+  font-size: 26px;
+}
+
+.block-editor-block-preview__content section.article-hero .overlay-skrim {
+  padding: 30px;
+}
+
+.block-editor-block-preview__content section.article-hero {
+  min-height: 350px !important;
+  height: 350px !important;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/block-intro/editor.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-pbrocks-block-starter-block-intro {
+  border: 1px dotted #f00;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/block-outro/editor.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-pbrocks-block-starter-block-outro {
+  border: 4px dotted #f00;
+}
+
+/*# sourceMappingURL=index.css.map*/

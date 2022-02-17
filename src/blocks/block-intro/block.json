@@ -5,7 +5,11 @@
   "version": "0.1.0",
   "title": "Block Intro",
   "category": "pbrocks-block-starter",
-  "icon": "carrot",
+  "icon": {
+		"foreground": "rgba(224, 224, 224, 0.92)",
+		"background": "rgba(11, 61, 145, 1)",
+		"src": "carrot"
+  },
   "description": "Block written with ESNext standard and JSX support – build step required.",
   "supports": {
     "html": false

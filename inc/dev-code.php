@@ -1,7 +1,16 @@
 <?php
 /**
- * Plugin Name: Sidetrack Dashboard Menu
+ *
  */
+
+add_filter( 'render_block', 'pbrocks_block_starter_show_block_type', 10, 2 );
+function pbrocks_block_starter_show_block_type( $block_content, $block ) {
+	if ( true === WP_DEBUG ) {
+		$block_content = "<div class='wp-block' data-blockType='{$block['blockName']}'>{$block_content}<h5 style=\"color:salmon\">{$block['blockName']}</h5></div>";
+	}
+	return $block_content;
+}
+
 /**
  * Add a page to the dashboard menu.
  *
@@ -27,7 +36,7 @@ function pbrocks_dashboard() {
  * @return string
  */
 function pbrocks_dashboard_page() {
-	global $wpdb;
+	   global $wpdb;
 	echo '<div class="wrap">';
 	echo '<h2>' . ucwords( preg_replace( '/_+/', ' ', __FUNCTION__ ) ) . '</h2>';
 	$screen         = get_current_screen();
@@ -95,16 +104,4 @@ function search_something_for_pbrocks() {
 	echo '<h4>$add_query_arg = ' . $add_query_arg . '</h4>';
 
 	echo '<br>We should have a button <a href="' . esc_url( add_query_arg( 'action', 'show_info' ) ) . '"><button>Click to add query arguments</button></a><br>';
-
-}
-
-add_filter( 'render_block', 'pbrocks_block_starter_show_block_type', 10, 2 );
-function pbrocks_block_starter_show_block_type( $block_content, $block ) {
-	if ( 'pbrocks-block-starter/swiper' === $block['blockName'] ) {
-		wp_enqueue_script( 'move-slider-bar' );
-	}
-	if ( true === WP_DEBUG ) {
-		$block_content = "<div class='wp-block' data-blockType='{$block['blockName']}'>{$block_content}<h5 style=\"color:salmon\">{$block['blockName']}</h5></div>";
-	}
-	return $block_content;
 }

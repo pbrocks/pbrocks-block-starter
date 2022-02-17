@@ -5,7 +5,11 @@
   "version": "0.1.0",
   "title": "Block Outro",
   "category": "pbrocks-block-starter",
-  "icon": "sos",
+  "icon": {
+		"foreground": "rgba(224, 224, 224, 0.92)",
+		"background": "rgba(11, 61, 145, 1)",
+		"src": "sos"
+  },
   "description": "Example block written with ESNext standard and JSX support – build step required.",
   "supports": {
     "html": false

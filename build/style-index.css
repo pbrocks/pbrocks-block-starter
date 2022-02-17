@@ -1,2 +1,75 @@
-.wp-block-pbrocks-block-starter-block-intro{background-color:#1d8c2a;color:#fff;padding:.3rem 1rem}
-.wp-block-pbrocks-block-starter-block-outro{background-color:#21759b;color:#fff;padding:.3rem 1rem}
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/block-intro/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-pbrocks-block-starter-block-intro {
+  background-color: #1d8c2a;
+  color: #fff;
+  padding: 0.3rem 1rem;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/block-outro/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-pbrocks-block-starter-block-outro {
+  background-color: #21759b;
+  color: #fff;
+  padding: 0.3rem 1rem;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/recipe-card/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+.wp-block-pbrocks-block-starter-recipe-card .recipe-image {
+  background: #f1f1f1;
+  float: right;
+  width: 50%;
+  min-height: 100px;
+  text-align: center;
+}
+
+.wp-block-pbrocks-block-starter-recipe-card .recipe-image button {
+  margin-top: 30px;
+}
+
+.wp-block-pbrocks-block-starter-recipe-card .recipe-image button.image-button {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.wp-block-pbrocks-block-starter-recipe-card .recipe-image img {
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+
+.wp-block-pbrocks-block-starter-recipe-card h2 {
+  font-size: 1.5em;
+}
+
+.wp-block-pbrocks-block-starter-recipe-card ul {
+  padding-left: 2.5em !important;
+  /* Needs fix in Gutenberg. */
+}
+
+.wp-block-pbrocks-block-starter-recipe-card:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
