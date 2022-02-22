@@ -34,11 +34,11 @@ function pbrocks_dashboard_page() {
 	$site_theme     = wp_get_theme();
 	$site_prefix    = $wpdb->prefix;
 	$prefix_message = '$site_prefix = ' . $site_prefix;
-	$plugin_stuff = get_plugin_data( dirname( __FILE__ ) );
+	$plugin_stuff   = get_plugin_data( dirname( __FILE__ ) );
 	if ( is_multisite() ) {
 		$network_prefix  = $wpdb->base_prefix;
 		$prefix_message .= '<br>$network_prefix = ' . $network_prefix;
-		$blog_id = get_current_blog_id();
+		$blog_id         = get_current_blog_id();
 		$prefix_message .= '<br>$site_prefix = ' . $network_prefix . $blog_id . '_';
 	}
 
@@ -98,7 +98,7 @@ function search_something_for_pbrocks() {
 
 }
 
-add_filter( 'render_block', 'pbrocks_block_starter_show_block_type', 10, 2 );
+// add_filter( 'render_block', 'pbrocks_block_starter_show_block_type', 10, 2 );
 function pbrocks_block_starter_show_block_type( $block_content, $block ) {
 	if ( 'pbrocks-block-starter/swiper' === $block['blockName'] ) {
 		wp_enqueue_script( 'move-slider-bar' );

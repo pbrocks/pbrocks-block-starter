@@ -2,6 +2,9 @@
   "plugins": [
     "."
   ],
+  "mappings": {
+    "wp-content/plugins": "./wp-content/plugins"
+  },
   "port": 4222,
   "env": {
     "tests": {
